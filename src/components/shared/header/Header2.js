@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
-import SearchIcon from "@material-ui/icons/Search";
-import InputBase from "@material-ui/core/InputBase";
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import SearchIcon from '@material-ui/icons/Search';
+import InputBase from '@material-ui/core/InputBase';
 import {
   Box,
   Button,
@@ -17,9 +17,9 @@ import {
   Link,
   makeStyles,
   MenuItem,
-} from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-import { Link as RouterLink } from "react-router-dom";
+} from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+import { Link as RouterLink } from 'react-router-dom';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -32,10 +32,10 @@ function ElevationScroll(props) {
   return React.cloneElement(children, {
     elevation: trigger ? 4 : 0,
     style: {
-      backgroundColor: trigger ? "white" : "white",
-      color: trigger ? "rgba(0,0,0,.7)" : "rgba(0,0,0,.7)",
-      transition: trigger ? "0.5s" : "0.5s",
-      transform: trigger ? "scale(1)" : "scale(1.05)",
+      backgroundColor: trigger ? 'white' : 'white',
+      color: trigger ? 'rgba(0,0,0,.7)' : 'rgba(0,0,0,.7)',
+      transition: trigger ? '0.5s' : '0.5s',
+      transform: trigger ? 'scale(1)' : 'scale(1.05)',
     },
   });
 }
@@ -49,153 +49,153 @@ ElevationScroll.propTypes = {
 
 const headersData = [
   {
-    label: "HOME",
-    href: "/",
+    label: 'HOME',
+    href: '/',
   },
   {
-    label: "What We Do",
-    href: "/what-we-do",
+    label: 'What We Do',
+    href: '/what-we-do',
   },
   {
-    label: "OUR SERVICES",
-    href: "our-services",
+    label: 'OUR SERVICES',
+    href: 'our-services',
   },
   {
-    label: "PROTFOLIO",
-    href: "#protfolio",
+    label: 'PROTFOLIO',
+    href: '/protfolio',
   },
   {
-    label: "CONTACT",
-    href: "#contact",
+    label: 'CONTACT',
+    href: '#contact',
   },
 ];
 
 const useStyles = makeStyles((theme) => ({
   header: {
-    paddingRight: "79px",
-    paddingLeft: "79px",
-    "@media (max-width: 900px)": {
+    paddingRight: '79px',
+    paddingLeft: '79px',
+    '@media (max-width: 900px)': {
       paddingLeft: 0,
     },
   },
   logo: {
-    fontFamily: "Work Sans, sans-serif",
+    fontFamily: 'Work Sans, sans-serif',
     fontWeight: 600,
     //color: "#FFFEFE",
-    color: "#82B440",
-    textAlign: "left",
-    display: "ilfine-block",
+    color: '#82B440',
+    textAlign: 'left',
+    display: 'ilfine-block',
   },
   menu: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   menuButton: {
-    fontFamily: "Open Sans, sans-serif",
+    fontFamily: 'Open Sans, sans-serif',
     fontWeight: 700,
-    fontSize: "15px",
-    padding: "20px 26px",
-    textDecoration: "none",
-    position: "relative",
-    borderTop: "1px solid #ddd",
-    "&::before": {
+    fontSize: '15px',
+    padding: '20px 26px',
+    textDecoration: 'none',
+    position: 'relative',
+    borderTop: '1px solid #ddd',
+    '&::before': {
       content: '""',
-      height: "3px",
-      width: "0",
-      backgroundColor: "#29abe2",
-      right: "0",
-      top: "-2px",
-      position: "absolute",
-      transition: "width .5s cubic-bezier(.25,.8,.25,1) 0s",
+      height: '3px',
+      width: '0',
+      backgroundColor: '#29abe2',
+      right: '0',
+      top: '-2px',
+      position: 'absolute',
+      transition: 'width .5s cubic-bezier(.25,.8,.25,1) 0s',
     },
-    "&:hover": {
-      "&::before": {
+    '&:hover': {
+      '&::before': {
         content: '""',
-        height: "3px",
-        width: "100%",
-        backgroundColor: "#29abe2",
-        left: "0",
-        top: "-2px",
-        position: "absolute",
+        height: '3px',
+        width: '100%',
+        backgroundColor: '#29abe2',
+        left: '0',
+        top: '-2px',
+        position: 'absolute',
       },
     },
   },
   toolbar: {
-    justifyContent: "space-between",
+    justifyContent: 'space-between',
   },
   drawerContainer: {
-    padding: "20px 30px",
+    padding: '20px 30px',
   },
   widget: {
-    color: "#627792",
-    fontSize: "15px",
-    textAlign: "center",
-    padding: "15px 0px",
-    "& a": {
-      cursor: "pointer",
-      fontWeight: "600",
+    color: '#627792',
+    fontSize: '15px',
+    textAlign: 'center',
+    padding: '15px 0px',
+    '& a': {
+      cursor: 'pointer',
+      fontWeight: '600',
     },
   },
   haveAnyQuestions: {
-    color: "#0e2b5c",
-    borderBottom: "1px dotted rgba(0, 0, 0, 0.5)",
-    fontSize: "15px",
+    color: '#0e2b5c',
+    borderBottom: '1px dotted rgba(0, 0, 0, 0.5)',
+    fontSize: '15px',
   },
   homeBody: {
-    marginTop: "-64px",
+    marginTop: '-64px',
   },
   headerQuestion: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
   },
   headerSearch: {
     // borderLeft: "1px solid #ddd",
     // borderRadius: "0px",
     // transform: "all .2s ease",
-    position: "absolute",
-    right: "0",
+    position: 'absolute',
+    right: '0',
     borderRadius: theme.shape.borderRadius,
     backgroundColor: fade(theme.palette.common.white, 0.15),
-    "&:hover": {
+    '&:hover': {
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
     marginLeft: 0,
-    width: "100%",
-    [theme.breakpoints.up("sm")]: {
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
       marginLeft: theme.spacing(1),
-      width: "auto",
+      width: 'auto',
     },
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     zIndex: 3,
   },
   inputRoot: {
-    color: "inherit",
-    paddingRight: "0",
+    color: 'inherit',
+    paddingRight: '0',
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
     //vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     //transition: theme.transitions.create("width"),
-    transition: "all .6s ease",
-    width: "100%",
-    borderLeft: "1px solid #ddd",
-    [theme.breakpoints.up("sm")]: {
-      width: "0",
-      "&:focus": {
-        background: "white",
-        width: "24ch",
-        border: "1px solid #ddd",
-        boxShadow: "0 2px 4px rgb(0 0 0 / 6%)",
+    transition: 'all .6s ease',
+    width: '100%',
+    borderLeft: '1px solid #ddd',
+    [theme.breakpoints.up('sm')]: {
+      width: '0',
+      '&:focus': {
+        background: 'white',
+        width: '24ch',
+        border: '1px solid #ddd',
+        boxShadow: '0 2px 4px rgb(0 0 0 / 6%)',
       },
     },
   },
@@ -235,7 +235,7 @@ export default function Header2(props) {
 
     setResponsiveness();
 
-    window.addEventListener("resize", () => setResponsiveness());
+    window.addEventListener('resize', () => setResponsiveness());
   }, []);
 
   const displayDesktop = () => {
@@ -245,7 +245,7 @@ export default function Header2(props) {
         <Box>
           <Typography
             className={widget}
-            variantMapping={{ p: "p" }}
+            variantMapping={{ p: 'p' }}
             variant="p"
           >
             {/* <Typography variantMapping={{ a: "a" }} variant="a">
@@ -257,14 +257,14 @@ export default function Header2(props) {
         </Box>
         <Box className={headerQuestion}>
           <img
-            style={{ marginRight: "13px" }}
+            style={{ marginRight: '13px' }}
             src="/../images/download.webp"
             alt="chat"
           ></img>
           <Typography
-            style={{ marginRight: "45px" }}
+            style={{ marginRight: '45px' }}
             className={haveAnyQuestions}
-            variantMapping={{ a: "a" }}
+            variantMapping={{ a: 'a' }}
             variant="a"
           >
             Have any questions?
@@ -279,7 +279,7 @@ export default function Header2(props) {
                 input: inputInput,
               }}
               placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
+              inputProps={{ 'aria-label': 'search' }}
             />
           </Box>
           {/* <IconButton className={headerSearch}>
@@ -300,10 +300,10 @@ export default function Header2(props) {
       <Toolbar>
         <IconButton
           {...{
-            edge: "start",
-            color: "inherit",
-            "aria-label": "menu",
-            "aria-haspopup": "true",
+            edge: 'start',
+            color: 'inherit',
+            'aria-label': 'menu',
+            'aria-haspopup': 'true',
             onClick: handleDrawerOpen,
           }}
         >
@@ -312,7 +312,7 @@ export default function Header2(props) {
 
         <Drawer
           {...{
-            anchor: "left",
+            anchor: 'left',
             open: drawerOpen,
             onClose: handleDrawerClose,
           }}
@@ -332,8 +332,8 @@ export default function Header2(props) {
           {...{
             component: RouterLink,
             to: href,
-            color: "inherit",
-            style: { textDecoration: "none" },
+            color: 'inherit',
+            style: { textDecoration: 'none' },
             key: label,
           }}
         >
@@ -344,18 +344,18 @@ export default function Header2(props) {
   };
 
   const femmecubatorLogo = (
-    <img style={{ maxWidth: "100px" }} alt="" src="../../brand-logo.png"></img>
+    <img style={{ maxWidth: '100px' }} alt="" src="../../brand-logo.png"></img>
   );
 
   const getMenuButtons = () => {
     return headersData.map(({ label, href }) => {
       return (
         <Typography
-          variantMapping={{ a: "a" }}
+          variantMapping={{ a: 'a' }}
           variant="a"
           {...{
             key: label,
-            color: "inherit",
+            color: 'inherit',
             to: href,
             component: RouterLink,
             className: menuButton,

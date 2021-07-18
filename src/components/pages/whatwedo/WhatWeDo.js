@@ -1,7 +1,7 @@
-import { Box } from "@material-ui/core";
-import React from "react";
-import Header2 from "../../shared/header/Header2";
-import Footer from "../../shared/footer/Footer";
+import { Box } from '@material-ui/core';
+import React from 'react';
+import Header2 from '../../shared/header/Header2';
+import Footer from '../../shared/footer/Footer';
 
 const WhatWeDo = () => {
   return (
