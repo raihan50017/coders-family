@@ -84,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
     //color: "#FFFEFE",
     color: "#82B440",
     textAlign: "left",
+    display: "ilfine-block",
   },
   menu: {
     display: "flex",
@@ -343,9 +344,7 @@ export default function Header2(props) {
   };
 
   const femmecubatorLogo = (
-    <Typography variant="h6" component="h1" className={logo}>
-      CODERS
-    </Typography>
+    <img style={{ maxWidth: "100px" }} alt="" src="../../brand-logo.png"></img>
   );
 
   const getMenuButtons = () => {
