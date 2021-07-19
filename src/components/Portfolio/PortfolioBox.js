@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2rem',
     fontWeight: 'bold',
     textShadow: '1px 1px #14203B',
-    marginBottom: '10px',
+    marginBottom: '30px',
   },
 }));
 const PortfolioBox = () => {

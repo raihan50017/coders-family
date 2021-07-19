@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -17,12 +17,23 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  sliderHeading: {
+    textAlign: 'center',
+    marginTop: '30px',
+    fontSize: '2rem',
+    fontWeight: 'bold',
+    textShadow: '1px 1px #14203B',
+    marginBottom: '30px',
+  },
   mySwiper: {},
 }));
 const PortfolioSlider = () => {
-  const { mySwiper } = useStyles();
+  const { mySwiper, sliderHeading } = useStyles();
   return (
     <React.Fragment>
+      <Typography className={sliderHeading} variant="h2">
+        OUR DEDICATED TEAM
+      </Typography>
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
