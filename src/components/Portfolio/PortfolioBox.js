@@ -4,9 +4,7 @@ import { Typography } from '@material-ui/core';
 import PortfolioCard from './PortfolioCard';
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
+  root: {},
 
   media: {
     height: 140,
@@ -18,9 +16,10 @@ const useStyles = makeStyles((theme) => ({
     textShadow: '1px 1px #14203B',
     marginBottom: '30px',
   },
+  ourProjectsCard: {},
 }));
 const PortfolioBox = () => {
-  const { root, galleryHeading } = useStyles();
+  const { root, galleryHeading, ourProjectsCard } = useStyles();
   return (
     <React.Fragment className={root}>
       <Container>
@@ -28,8 +27,8 @@ const PortfolioBox = () => {
           {' '}
           OUR PROJECTS
         </Typography>
-        <Grid container spacing={1}>
-          <Grid item xs={6} sm={4}>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={4} className={`${ourProjectsCard} `}>
             <PortfolioCard
               text={'Company name'}
               description={'Some Lines about the Company'}
@@ -38,7 +37,7 @@ const PortfolioBox = () => {
               }
             />
           </Grid>{' '}
-          <Grid item xs={6} sm={4}>
+          <Grid item xs={12} sm={4} className={`${ourProjectsCard} `}>
             <PortfolioCard
               text={'Company name'}
               description={'Some Lines about the Company'}
@@ -47,7 +46,7 @@ const PortfolioBox = () => {
               }
             />
           </Grid>{' '}
-          <Grid item xs={6} sm={4}>
+          <Grid item xs={12} sm={4} className={`${ourProjectsCard} `}>
             <PortfolioCard
               text={'Company name'}
               description={'Some Lines about the Company'}
@@ -56,7 +55,7 @@ const PortfolioBox = () => {
               }
             />
           </Grid>{' '}
-          <Grid item xs={6} sm={4}>
+          <Grid item xs={12} sm={4} className={`${ourProjectsCard} `}>
             <PortfolioCard
               text={'Company name'}
               description={'Some Lines about the Company'}
@@ -65,7 +64,7 @@ const PortfolioBox = () => {
               }
             />
           </Grid>{' '}
-          <Grid item xs={6} sm={4}>
+          <Grid item xs={12} sm={4} className={`${ourProjectsCard} `}>
             <PortfolioCard
               text={'Company name'}
               description={'Some Lines about the Company'}
@@ -74,7 +73,7 @@ const PortfolioBox = () => {
               }
             />
           </Grid>{' '}
-          <Grid item xs={6} sm={4}>
+          <Grid item xs={12} sm={4} className={`${ourProjectsCard} `}>
             <PortfolioCard
               text={'Company name'}
               description={'Some Lines about the Company'}

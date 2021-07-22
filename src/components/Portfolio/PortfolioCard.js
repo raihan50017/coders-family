@@ -7,24 +7,61 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Box } from '@material-ui/core';
 const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
+  card: {
+    textAlign: 'center',
+    position: 'relative',
+    color: '#fff',
+    '& :hover': {
+      CardInfo: {
+        // display: 'none',
+      },
+    },
   },
   media: {
-    height: 140,
+    height: 300,
+  },
+  cardStyle: {
+    width: '384px',
+    margin: '0 auto',
+  },
+  CardInfo: {
+    padding: '2rem',
+    background: 'rgb(0, 0, 0,0.1)',
+    display: 'block',
+    marginTop: '5.5rem',
+    position: 'absolute',
+    marginLeft: '5rem',
+    zIndex: '999',
+    '& :hover': {
+      zIndex: '999',
+    },
   },
 });
 const PortfolioCard = ({ photoUrl, text, description }) => {
-  const { root, media } = useStyles();
+  const { card, media, cardStyle, CardInfo } = useStyles();
   return (
-    <div>
-      <Card className={root}>
+    <Box className={card}>
+      <Card className={cardStyle}>
+        <Box className={CardInfo}>
+          <Typography variant="h6" color="textSecondary">
+            {' '}
+            name
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            {' '}
+            Short Description
+          </Typography>
+          <Button variant="contained" color="primary">
+            Details
+          </Button>
+        </Box>
         <CardActionArea>
           <CardMedia
             className={media}
             image={photoUrl}
-            title="Contemplative Reptile"
+            title="Contemplative "
           />
           <CardContent>
             <Typography>{text}</Typography>
@@ -34,7 +71,7 @@ const PortfolioCard = ({ photoUrl, text, description }) => {
           </CardContent>
         </CardActionArea>
       </Card>
-    </div>
+    </Box>
   );
 };
 

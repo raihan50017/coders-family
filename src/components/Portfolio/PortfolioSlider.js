@@ -24,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     textShadow: '1px 1px #14203B',
     marginBottom: '30px',
+    '& h1': {},
   },
   mySwiper: {},
 }));
