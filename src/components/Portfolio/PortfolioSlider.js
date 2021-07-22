@@ -14,8 +14,26 @@ import SwiperCore, { Pagination } from 'swiper/core';
 SwiperCore.use([Pagination]);
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
+  swiperContainer: {
+    width: '100%',
+    height: '30vh',
+  },
+
+  swiperSlide: {
+    textAlign: 'center',
+    fontSize: '18px',
+    background: '#fff',
+    display: 'flex',
+
+    justifyContent: 'center',
+
+    alignItems: 'center',
+    ' & >img': {
+      display: 'block',
+      width: '20rem',
+      height: '20rem',
+      objectFit: 'cover',
+    },
   },
   sliderHeading: {
     textAlign: 'center',
@@ -29,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   mySwiper: {},
 }));
 const PortfolioSlider = () => {
-  const { mySwiper, sliderHeading } = useStyles();
+  const { mySwiper, sliderHeading, swiperSlide } = useStyles();
   return (
     <React.Fragment>
       <Typography className={sliderHeading} variant="h2">
@@ -38,61 +56,60 @@ const PortfolioSlider = () => {
       <Swiper
         slidesPerView={4}
         spaceBetween={30}
-        centeredSlides={true}
         pagination={{
           clickable: true,
         }}
-        className="mySwiper"
+        className="mySwiper swiperContainer"
       >
-        <SwiperSlide>
+        <SwiperSlide className={swiperSlide}>
           <img
             src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
             alt=""
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={swiperSlide}>
           <img
             src="https://images.unsplash.com/photo-1614023342667-6f060e9d1e04?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
             alt=""
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={swiperSlide}>
           <img
             src="https://images.unsplash.com/photo-1561588951-583249cd5060?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
             alt=""
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={swiperSlide}>
           <img
             src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
             alt=""
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={swiperSlide}>
           <img
             src="https://images.unsplash.com/photo-1568392021577-fad7eb6efba1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=670&q=80"
             alt=""
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={swiperSlide}>
           <img
             src="https://images.unsplash.com/photo-1543075270-17e1257ec612?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80"
             alt=""
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={swiperSlide}>
           <img
             src="https://images.unsplash.com/photo-1514543250559-83867827ecce?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1011&q=80"
             alt=""
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={swiperSlide}>
           <img
             src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
             alt=""
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className={swiperSlide}>
           <img
             src="https://images.unsplash.com/photo-1613163755693-3df66f1a0e11?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80"
             alt=""

@@ -6,9 +6,6 @@ import { Box } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 
 const styles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
   portfolioHeaderContainer: {
     background:
       'url(https://images.unsplash.com/photo-1593642533144-3d62aa4783ec?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80)',
@@ -17,7 +14,7 @@ const styles = makeStyles((theme) => ({
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
   },
-  portfolioHead: {
+  portfolioHeader: {
     backgroundColor: 'rgba(10,32,68,0.7)',
     padding: '37px ',
     color: 'white',
@@ -25,7 +22,7 @@ const styles = makeStyles((theme) => ({
   },
 }));
 const portfolioHeader = () => {
-  const { root, header, portfolioHeaderContainer, portfolioHead } = styles();
+  const { root, portfolioHeaderContainer, portfolioHeader } = styles();
 
   return (
     <Box
@@ -35,7 +32,7 @@ const portfolioHeader = () => {
     >
       <Box>
         <Box className={''}>
-          <Typography className={portfolioHead} variant="h2">
+          <Typography className={portfolioHeader} variant="h2">
             Portfolio
           </Typography>
         </Box>

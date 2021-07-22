@@ -6,10 +6,7 @@ import PortfolioCard from './PortfolioCard';
 const useStyles = makeStyles((theme) => ({
   root: {},
 
-  media: {
-    height: 140,
-  },
-  galleryHeading: {
+  portfolioGalleryHeading: {
     marginTop: '30px',
     fontSize: '2rem',
     fontWeight: 'bold',
@@ -19,11 +16,15 @@ const useStyles = makeStyles((theme) => ({
   ourProjectsCard: {},
 }));
 const PortfolioBox = () => {
-  const { root, galleryHeading, ourProjectsCard } = useStyles();
+  const { root, portfolioGalleryHeading, ourProjectsCard } = useStyles();
   return (
     <React.Fragment className={root}>
       <Container>
-        <Typography className={galleryHeading} align={'center'} variant="h2">
+        <Typography
+          className={portfolioGalleryHeading}
+          align={'center'}
+          variant="h2"
+        >
           {' '}
           OUR PROJECTS
         </Typography>

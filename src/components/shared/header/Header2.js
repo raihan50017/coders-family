@@ -62,7 +62,7 @@ const headersData = [
   },
   {
     label: 'PROTFOLIO',
-    href: '/protfolio',
+    href: '/portfolio',
   },
   {
     label: 'CONTACT',

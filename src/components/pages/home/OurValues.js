@@ -1,46 +1,46 @@
-import { Box, Typography, makeStyles } from '@material-ui/core';
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper.min.css';
-import 'swiper/components/pagination/pagination.min.css';
-import 'swiper/components/navigation/navigation.min.css';
-import SwiperCore, { Autoplay, Pagination, Navigation } from 'swiper/core';
+import { Box, Typography, makeStyles } from "@material-ui/core";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import "swiper/components/navigation/navigation.min.css";
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const styles = makeStyles((theme) => ({
   ourValuesContainer: {
     background:
-      'black url(https://cdn.shortpixel.ai/spai/q_lossy+ret_img/https://www.werbackspace.com/wp-content/uploads/2019/07/new-york-383945.jpg?id=2979)',
-    backgroundPosition: 'center',
-    backgroundColor: 'black',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
+      "black url(https://cdn.shortpixel.ai/spai/q_lossy+ret_img/https://www.werbackspace.com/wp-content/uploads/2019/07/new-york-383945.jpg?id=2979)",
+    backgroundPosition: "center",
+    backgroundColor: "black",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
   },
   ourValuesInner: {
-    backgroundColor: 'rgba(10,32,68,0.7)',
-    padding: '100px 79px',
-    color: 'white',
-    textAlign: 'center',
+    backgroundColor: "rgba(10,32,68,0.7)",
+    padding: "100px 79px",
+    color: "white",
+    textAlign: "center",
   },
   ourValuesHeading: {
-    fontWeight: '500',
-    fontSize: '1.875rem',
-    lineHeight: '1.2em',
-    marginTop: '6px',
-    textAlign: 'center',
+    fontWeight: "500",
+    fontSize: "1.875rem",
+    lineHeight: "1.2em",
+    marginTop: "6px",
+    textAlign: "center",
   },
   swiperSlide: {
-    fontSize: '6rem',
-    fontWeight: '700',
+    fontSize: "6rem",
+    fontWeight: "700",
   },
   ourValuesComment: {
-    fontSize: '1.35rem',
-    color: '#ffffff',
-    textAlign: 'center',
+    fontSize: "1.35rem",
+    color: "#ffffff",
+    textAlign: "center",
   },
   swiper: {
-    marginTop: '10px',
+    marginTop: "10px",
   },
 }));
 

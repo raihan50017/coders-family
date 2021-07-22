@@ -12,11 +12,14 @@ const useStyles = makeStyles({
   card: {
     textAlign: 'center',
     position: 'relative',
-    color: '#fff',
+
     '& :hover': {
-      CardInfo: {
-        // display: 'none',
+      '& .card-info': {
+        transform: 'scale(1)',
       },
+    },
+    '& h6': {
+      color: '#fff',
     },
   },
   media: {
@@ -26,31 +29,29 @@ const useStyles = makeStyles({
     width: '384px',
     margin: '0 auto',
   },
-  CardInfo: {
+  cardInfo: {
+    position: 'absolute',
     padding: '2rem',
     background: 'rgb(0, 0, 0,0.1)',
-    display: 'block',
+    // display: 'none',
+    transform: 'scale(0)',
+
     marginTop: '5.5rem',
-    position: 'absolute',
     marginLeft: '5rem',
     zIndex: '999',
-    '& :hover': {
-      zIndex: '999',
-    },
+    transition: 'all .6s ease',
   },
 });
 const PortfolioCard = ({ photoUrl, text, description }) => {
-  const { card, media, cardStyle, CardInfo } = useStyles();
+  const { card, media, cardStyle, cardInfo } = useStyles();
   return (
     <Box className={card}>
       <Card className={cardStyle}>
-        <Box className={CardInfo}>
+        <Box className={`${cardInfo} card-info`}>
           <Typography variant="h6" color="textSecondary">
-            {' '}
             name
           </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            {' '}
+          <Typography variant="p" component="p">
             Short Description
           </Typography>
           <Button variant="contained" color="primary">

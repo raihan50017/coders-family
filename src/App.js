@@ -24,8 +24,8 @@ function App() {
         <Route exact path="/our-services">
           <OurServices></OurServices>
         </Route>
-        <Route path="/protfolio">
-          <Portfolio></Portfolio>
+        <Route exact path="/portfolio">
+          <Portfolio />
         </Route>
         <Route path="/protfolio-home">
           <Profile render={() => <ProtfolioHome></ProtfolioHome>}></Profile>
@@ -41,7 +41,6 @@ function App() {
             render={() => <ProtfolioProfile></ProtfolioProfile>}
           ></Profile>
         </Route>
-
         <Route path="/protfolio-contact">
           <Profile
             render={() => <ProtfolioContact></ProtfolioContact>}
